@@ -55,17 +55,17 @@ internal class Controller
           _     =>  digimons.OrderBy(d => d.Number)  
         };
 
-    // If the default case was hit, you might still want a message
-    if (choice.ToLower() is not "hp" and not "atk" and not "name")
-    {
-        Console.WriteLine("Invalid choice, sorting by Number instead.");
-    }
+        // If the default case was hit, you might still want a message
+        if (choice.ToLower() is not "hp" and not "atk" and not "name")
+        {
+            Console.WriteLine("Invalid choice, sorting by Number instead.");
+        }
 
-    Console.WriteLine($"\n--- Sorted by {choice.ToUpper()} ---"); 
-    foreach (var d in sortedList.Take(10)) 
-    {
-        Console.WriteLine($"{d.Name,-15} | HP: {d.Lv50HP} | ATK: {d.Lv50ATK}");
-    }    
+            Console.WriteLine($"\n--- Sorted by {choice.ToUpper()} ---"); 
+        foreach (var d in sortedList.Take(10)) 
+        {
+            Console.WriteLine($"{d.Name,-20} | HP: {d.Lv50HP,-5} | ATK: {d.Lv50ATK}");
+        }    
 
     }
 }

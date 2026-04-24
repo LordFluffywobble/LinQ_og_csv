@@ -1,0 +1,5 @@
+1. Prepare the database in Loader.cs
+2. Prepare the classes in the DigionClass.cs
+3. Do the database queries etc in Controller.cs
+4. Prepare the database in main using the Loader and Controller classes to get access to their methods and build "bridges" between them
+5. Write a user options in main for user input
