@@ -15,6 +15,8 @@ class Program
         // Control.ShowStageDistribution(result);   
         // Control.Descending(result);
 
+        Control.SelectedNames(result);
+
         Console.WriteLine("Sort the Digimons using either, HP, ATK, or Name");
         string? userInput = Console.ReadLine();
         Control.SortByUserChoice(result, userInput ?? "name");

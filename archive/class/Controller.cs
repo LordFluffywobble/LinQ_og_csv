@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using Microsoft.VisualBasic;
 
 namespace MVC_og_LinQ;
@@ -62,10 +63,21 @@ internal class Controller
         }
 
             Console.WriteLine($"\n--- Sorted by {choice.ToUpper()} ---"); 
+        //Get the top 10 of the list
         foreach (var d in sortedList.Take(10)) 
         {
             Console.WriteLine($"{d.Name,-20} | HP: {d.Lv50HP,-5} | ATK: {d.Lv50ATK}");
         }    
+    }
 
+    internal void SelectedNames(List<Digimon> digimons)
+    {
+        //cycle trhough the first 10 names in the ds list with the foreach loop
+        var ds = digimons.Select(d => d.Name).Take(10).ToList();
+        foreach (var d in ds)
+        {
+        Console.WriteLine($"{d}"); 
+        }
+        Console.WriteLine("");
     }
 }
