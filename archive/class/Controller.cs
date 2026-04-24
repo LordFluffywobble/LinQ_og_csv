@@ -72,12 +72,15 @@ internal class Controller
 
     internal void SelectedNames(List<Digimon> digimons)
     {
-        //cycle trhough the first 10 names in the ds list with the foreach loop
+        //cycle trhough the first 10 names in the ds list with the foreach loop. The list is not a digimon object
         var ds = digimons.Select(d => d.Name).Take(10).ToList();
         foreach (var d in ds)
         {
         Console.WriteLine($"{d}"); 
         }
+        //Notes:    To use the digimon object you have to remove either the .Select option and write var ds = digimons.ToList();
+        //          Can use an anonomous function to chose multiple specific things without picking the whole object.
+        //          Example: var ds = digimons.Select(d. => new {d.Name, d.Stage}).ToList();            
         Console.WriteLine("");
     }
 }
