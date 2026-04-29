@@ -81,6 +81,7 @@ internal class Controller
         //Notes:    To use the digimon object you have to remove either the .Select option and write var ds = digimons.ToList();
         //          Can use an anonomous function to chose multiple specific things without picking the whole object.
         //          Example: var ds = digimons.Select(d. => new {d.Name, d.Stage}).ToList();            
-        Console.WriteLine("");
+       
+       Console.WriteLine(""); //Just to put a blacnk line before the user input in main
     }
 }
